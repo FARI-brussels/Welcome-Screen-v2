@@ -33,7 +33,7 @@ const demoFilePath: string = path.resolve(__dirname, '../stores/demoConfig.json'
 
 const demoConfig: DemoConfig = {
   id: demoId,
-  slug: demoSlug
+  slug: demoSlug,
 }
 
 try {

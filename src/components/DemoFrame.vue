@@ -28,7 +28,7 @@ const iframeID = computed(() => props.frameId || uuidv4())
 const defaultOrigin = window.location.origin
 const allowedOrigin = computed(() => props.allowedOrigin || defaultOrigin)
 
-const onIframeLoad = (e) => {
+const onIframeLoad = () => {
   if (iframeEl.value) {
     iframeEl.value.style.visibility = 'visible'
   }

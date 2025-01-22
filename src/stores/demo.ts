@@ -5,7 +5,6 @@ import { ref } from 'vue'
 import demoConfig from './demoConfig.json'
 
 const exception: string = 'https://ehai.ai.vub.ac.be/demos/visual-question-answering/'
-const exceptionId: number = 54
 
 export const useDemoStore = defineStore('demo', () => {
   const loading = ref(false)

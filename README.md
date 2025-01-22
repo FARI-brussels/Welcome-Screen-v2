@@ -23,7 +23,13 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+npm run demo --slug=<some slug>
+```
+
+or
+
+```sh
+npm run demo --id=<some id>
 ```
 
 ### Type-Check, Compile and Minify for Production
