@@ -43,7 +43,7 @@ watch(
 .vue-iframe {
   height: 100vh;
   width: 100vw;
-
+  font-weight: bold;
   iframe {
     height: 100%;
     width: 100%;
