@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 interface DemoConfig {
-  id?: string
+  id: number | null
   slug?: string
 }
 
@@ -32,7 +32,7 @@ if (!demoId && !demoSlug) {
 const demoFilePath: string = path.resolve(__dirname, '../stores/demoConfig.json')
 
 const demoConfig: DemoConfig = {
-  id: demoId,
+  id: demoId ? parseInt(demoId) : null,
   slug: demoSlug,
 }
 

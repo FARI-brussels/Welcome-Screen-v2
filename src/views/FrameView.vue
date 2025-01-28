@@ -20,7 +20,7 @@ const { data, locale } = storeToRefs(useDemoStore())
 
 const { getCMSData } = useDemoStore()
 
-onMounted(getCMSData)
+onMounted(() => !data.value && getCMSData())
 </script>
 
 <style scoped lang="scss">

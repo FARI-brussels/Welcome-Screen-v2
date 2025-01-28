@@ -19,12 +19,14 @@ export const useDemoStore = defineStore('demo', () => {
     error.value = null
 
     try {
-      const { id, slug } = demoConfig
+      const { id, slug }: { id: number | null; slug: string } = demoConfig
+      if (!id && !slug)
+        throw new Error(`No ID or slug provided, current values are ${{ id, slug }}`)
 
-      const demoData = slug ? await fetchDirectus({ slug }) : await fetchDirectus({ id })
+      const demoData = await fetchDirectus(id ? { id } : { slug })
 
       if (demoData?.app_url?.[locale.value] === exception) iframeEnabled.value = false
-      console.log(demoData?.app_url)
+
       data.value = demoData
     } catch (err) {
       error.value = `Error fetching data: ${err}`
