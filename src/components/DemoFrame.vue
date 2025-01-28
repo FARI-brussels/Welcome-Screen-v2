@@ -1,6 +1,6 @@
 <template>
   <div class="vue-iframe">
-    <iframe :src="src" ref="iframeEl" style="border: none" :id="iframeID" @load="onIframeLoad" />
+    <iframe :src="src" ref="iframeEl" class="i_frame" :id="iframeID" @load="onIframeLoad" />
   </div>
 </template>
 
@@ -44,9 +44,10 @@ watch(
   height: 100vh;
   width: 100vw;
   font-weight: bold;
-  iframe {
-    height: 100%;
-    width: 100%;
-  }
+}
+.i_frame {
+  height: 100%;
+  width: 100%;
+  border: none;
 }
 </style>
