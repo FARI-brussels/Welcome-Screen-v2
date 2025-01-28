@@ -1,13 +1,6 @@
 <template>
   <div class="vue-iframe">
-    <iframe
-      v-bind="$attrs"
-      :src="src"
-      ref="iframeEl"
-      style="border: none"
-      :id="iframeID"
-      @load="onIframeLoad"
-    />
+    <iframe :src="src" ref="iframeEl" style="border: none" :id="iframeID" @load="onIframeLoad" />
   </div>
 </template>
 
