@@ -48,8 +48,8 @@ watch(
 
 <style scoped>
 .vue-iframe {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 
   iframe {
     height: 100%;

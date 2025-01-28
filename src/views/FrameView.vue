@@ -1,11 +1,5 @@
 <template>
-  <DemoFrame
-    v-if="data"
-    :src="data.app_url[locale]"
-    crossorigin="true"
-    width="100vw"
-    height="100vh"
-  />
+  <DemoFrame v-if="data" :src="data.app_url[locale]" crossorigin="true" />
 </template>
 
 <script setup lang="ts">
